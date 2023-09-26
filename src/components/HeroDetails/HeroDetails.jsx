@@ -26,7 +26,7 @@ const HeroDetails = ({ currentHero, changeTypeOfModal, navigateBack }) => {
         }}
       >
         <img
-          src={`http://localhost:3006/${currentHero.imageUrl}`}
+          src={`https://superhero-fszo.onrender.com/${currentHero.imageUrl}`}
           alt={currentHero.title}
           style={{
             position: 'absolute',

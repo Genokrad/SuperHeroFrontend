@@ -13,7 +13,7 @@ import ZoomInIcon from '@mui/icons-material/ZoomIn';
 
 const HeroCard = ({ hero, idSetter, deletHeroCard }) => {
   const fetchImg = hero => {
-    return `http://localhost:3006/${hero.imageUrl}`;
+    return `https://superhero-fszo.onrender.com/${hero.imageUrl}`;
   };
 
   return (
