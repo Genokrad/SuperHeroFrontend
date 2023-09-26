@@ -11,7 +11,7 @@ export const getHeroes = createAsyncThunk(
   'hero/getHeroes',
   async (page, { rejectWithValue, dispatch }) => {
     const result = await axios.get(
-      `https://superhero-fszo.onrender.com/api/heroes?page=${page}&pageSize=5`
+      `http://localhost:3006/api/heroes?page=${page}&pageSize=5`
     );
     // console.log(result);
     dispatch(setAllHero(result.data));
@@ -27,7 +27,7 @@ export const addHeroToDb = createAsyncThunk(
       formData.append('jsonData', JSON.stringify(hero));
 
       const response = await axios.post(
-        'https://superhero-fszo.onrender.com/api/heroes',
+        'http://localhost:3006/api/heroes',
         formData,
         {
           headers: {
@@ -46,9 +46,7 @@ export const addHeroToDb = createAsyncThunk(
 export const deletHeroById = createAsyncThunk(
   'hero/delHero',
   async (id, { rejectWithValue, dispatch }) => {
-    const result = await axios.delete(
-      `https://superhero-fszo.onrender.com/api/heroes/${id}`
-    );
+    const result = await axios.delete(`http://localhost:3006/api/heroes/${id}`);
     console.log(result);
     dispatch(deleteHero(id));
   }
