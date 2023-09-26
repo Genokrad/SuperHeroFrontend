@@ -44,7 +44,6 @@ const MyForm = ({ changeTypeOfModal, modalType, currentHero }) => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(addHeroToDb(formData));
-    // Отправка данных формы на сервер или выполнение другой логики здесь
     console.log(formData);
 
     setFormData(initialFormData);
